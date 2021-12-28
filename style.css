@@ -10,19 +10,12 @@ button {
   font-family: "Mark Pro", Arial, sans-serif;
 }
 
-body {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-}
-
 main {
   width: 100%;
 }
 
 main .container {
-  max-width: 1250px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   padding: 20px;
@@ -37,6 +30,8 @@ main .container {
   align-items: center;
   justify-content: space-between;
   padding: 60px;
+
+  gap: 200px;
 }
 
 .container .left-content .top-side {
@@ -113,6 +108,103 @@ main .container {
   padding-left: 7px;
 }
 
+.top-side .links {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.top-side .links .social {
+  background: #fff;
+  width: 100%;
+  display: flex;
+  place-content: center;
+
+  border: solid 2px transparent;
+  border-radius: 3px;
+  padding: 5px 0;
+
+  transition: all 200ms ease-in-out;
+}
+
+.links .social:hover {
+  filter: brightness(95%);
+}
+
+.links .social.facebook {
+  background: #1778F2;
+}
+
+.links .social.google {
+  background: #ffffff;
+  border-color: rgb(240, 240, 240);
+}
+
+.links .social.apple {
+  background: #000000;
+}
+
+.links .social.apple:hover {
+  filter: opacity(90%);
+}
+
+.left-content .bottom-side {
+  width: 100%;
+}
+
+.left-content .bottom-side button {
+  display:flex;
+  place-content: center;
+  background: #F8F8F8;
+  border: solid 2px rgb(224, 224, 224);
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 auto;
+  transition: all 200ms ease-in-out;
+}
+
+.bottom-side button svg {
+  flex-shrink: 0;
+  height: 40px;
+  width: 40px;
+  fill: rgb(224, 224, 224);
+}
+
+form:valid > .bottom-side button {
+  background: #D13639;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+form:valid > .bottom-side button:hover {
+ background: #bb2e31;
+}
+
+form:valid > .bottom-side button svg {
+  fill: #fff;
+}
+
+.bottom-side .help {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.help a {
+  font-size: 11px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(107, 107, 107);
+}
+
+.help a + a {
+  color: rgb(182, 182, 182);
+}
+
 main .container .right-content {
   width: 100%;
   background-image: url("./assets/client-background.jpg");
@@ -120,7 +212,6 @@ main .container .right-content {
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 @media(max-width: 768px) {
   .container .right-content {
