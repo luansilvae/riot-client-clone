@@ -7,7 +7,8 @@
 html,
 input,
 button {
-  font-family: "Mark Pro", Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 main {
@@ -55,6 +56,7 @@ main .container {
   text-align: center;
   font-size: 24px;
   letter-spacing: -1px;
+  font-weight: 400;
 }
 
 .top-side .input {
@@ -97,8 +99,9 @@ main .container {
   background: none;
   padding: 8px;
   outline: none;
-  margin-top: 12px;
+  margin-top: 8px;
   font-size: 16px;
+  color: #3b3a3a;
 }
 
 .input input:focus + label,
@@ -198,11 +201,20 @@ form:valid > .bottom-side button svg {
   font-size: 11px;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(107, 107, 107);
+  color: #b6b6b6;
+}
+
+.help a:hover {
+  color: #111111;
 }
 
 .help a + a {
-  color: rgb(182, 182, 182);
+  color: #c7c7c7;
+}
+
+
+.help a + a:hover {
+  filter: contrast(20%);
 }
 
 main .container .right-content {
