@@ -16,10 +16,9 @@ main {
 }
 
 main .container {
-  max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  padding: 20px;
+  height: 100vh;
 }
 
 .container .left-content {
@@ -31,8 +30,13 @@ main .container {
   align-items: center;
   justify-content: space-between;
   padding: 60px;
+}
 
-  gap: 200px;
+@media(max-height: 768px) {
+  .container .left-content {
+    gap: 40px;
+    height: 100%;
+  }
 }
 
 .container .left-content .top-side {
@@ -46,7 +50,6 @@ main .container {
 .top-side .logo {
   margin: 10px 0 50px;
 }
-
 
 .top-side .logo svg {
   width: 100px;
@@ -212,16 +215,16 @@ form:valid > .bottom-side button svg {
   color: #c7c7c7;
 }
 
-
 .help a + a:hover {
   filter: contrast(20%);
 }
 
 main .container .right-content {
   width: 100%;
+  height: 100%;
   background-image: url("./assets/client-background.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 65%;
   background-repeat: no-repeat;
 }
 
