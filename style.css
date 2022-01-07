@@ -23,7 +23,7 @@ main .container {
 
 .container .left-content {
   background-color: rgb(248, 248, 248);
-  min-width: 400px;
+  min-width: 500px;
 
   display: flex;
   flex-direction: column;
@@ -52,14 +52,15 @@ main .container {
 }
 
 .top-side .logo svg {
-  width: 100px;
+  width: 125px;
 }
 
 .top-side h1 {
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   letter-spacing: -1px;
   font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .top-side .input {
@@ -88,10 +89,10 @@ main .container {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
-  padding-left: 10px;
-  color: rgb(107, 107, 107);
+  padding-left: 15px;
+  color: rgb(148, 148, 148);
   cursor: text;
   transition: all 200ms ease-in-out;
 }
@@ -102,14 +103,14 @@ main .container {
   background: none;
   padding: 8px;
   outline: none;
-  margin-top: 8px;
-  font-size: 16px;
+  margin-top: 20px;
+  font-size: 18px;
   color: #3b3a3a;
 }
 
 .input input:focus + label,
 .input input:valid + label {
-  font-size: 10px;
+  font-size: 11px;
   transform: translateY(-150%);
   padding-left: 7px;
 }
@@ -129,8 +130,8 @@ main .container {
   place-content: center;
 
   border: solid 2px transparent;
-  border-radius: 3px;
-  padding: 5px 0;
+  border-radius: 6px;
+  padding: 10px 0;
 
   transition: all 200ms ease-in-out;
 }
@@ -164,17 +165,17 @@ main .container {
   display:flex;
   place-content: center;
   background: #F8F8F8;
-  border: solid 2px rgb(224, 224, 224);
-  padding: 10px;
-  border-radius: 20px;
+  border: solid 3px rgb(224, 224, 224);
+  padding: 15px;
+  border-radius: 23px;
   margin: 0 auto;
   transition: all 200ms ease-in-out;
 }
 
 .bottom-side button svg {
   flex-shrink: 0;
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
   fill: rgb(224, 224, 224);
 }
 
@@ -201,7 +202,7 @@ form:valid > .bottom-side button svg {
 }
 
 .help a {
-  font-size: 11px;
+  font-size: 13px;
   text-decoration: none;
   text-transform: uppercase;
   color: #b6b6b6;
@@ -224,8 +225,41 @@ main .container .right-content {
   height: 100%;
   background-image: url("./assets/client-background.jpg");
   background-size: cover;
-  background-position: 65%;
+  background-position: right;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.right-content .controls {
+  position: absolute;
+  right: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+}
+
+.controls li {
+  padding: 5px 12px;
+}
+
+.controls li:hover {
+  background: #adadad42;
+}
+
+
+.controls li + li:hover {
+  background: #bb2e31;
+}
+
+.controls li:hover > svg {
+  fill: #fff;
+}
+
+.controls svg {
+  fill: #dfdfdfdf;
+  width: 16px; 
 }
 
 @media(max-width: 768px) {
